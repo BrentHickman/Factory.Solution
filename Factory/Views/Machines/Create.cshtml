@@ -1,0 +1,23 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Factory.Models.Machine
+
+<h4>Add a new Machine</h4>
+<p>@Html.ValidationMessageFor(model => model.MachineName, "", new { @class = "text-danger", @style = "font-weight: 600;" })</p>
+<p>@Html.ValidationMessageFor(model => model.InstallDate, "", new { @class = "text-danger", @style = "font-weight: 600;" })</p>
+
+@using (Html.BeginForm())
+{
+  @Html.LabelFor(model => model.MachineName, "Machine Name: ")
+  @Html.TextBoxFor(model => model.MachineName)
+
+  @Html.LabelFor(model => model.InstallDate, "Install Date: ")
+  @Html.EditorFor(model => model.InstallDate)
+
+
+  <input type="submit" value="Add new Machine"/>
+}
+<p>@Html.ActionLink("Show all Machines", "Index")</p>
+<p>@Html.ActionLink("Return Home", "Index", "Home")</p>
