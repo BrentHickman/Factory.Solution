@@ -7,8 +7,8 @@
 
 <h2>Engineer Details</h2>
 <hr />
-<h3>@Html.DisplayNameFor(model => model.EngineerName): @Html.DisplayFor(model => model.EngineerName)</h3>  
-<h3>@Html.DisplayNameFor(model => model.HireDate): @Html.DisplayFor(model => model.HireDate)</h3>  
+<h3>@Html.LabelFor(model => model.EngineerName, "Engineer Name: ") @Html.DisplayFor(model => model.EngineerName)</h3>  
+<h3>@Html.LabelFor(model => model.HireDate, "Date Hired: ") @Html.DisplayFor(model => model.HireDate)</h3>  
 
 
 @if(@Model.JoinEntities.Count == 0)

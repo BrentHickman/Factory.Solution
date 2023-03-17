@@ -7,7 +7,8 @@
 
 <h2>Machine Details</h2>
 <hr />
-<h3>@Html.DisplayNameFor(model => model.MachineName): @Html.DisplayFor(model => model.MachineName)</h3>
+<h3>@Html.LabelFor(model => model.MachineName, "Machine Name: ") @Html.DisplayFor(model => model.MachineName)</h3>
+<h3>@Html.LabelFor(model => model.InstallDate, "Install Date: ") @Html.DisplayFor(model => model.InstallDate)</h3>
 
 @if(@Model.JoinEntities.Count == 0)
 {
