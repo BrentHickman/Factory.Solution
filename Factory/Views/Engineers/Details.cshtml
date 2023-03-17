@@ -13,11 +13,11 @@
 
 @if(@Model.JoinEntities.Count == 0)
 {
-  <p>This engineer does not have any Machines yet!</p>
+  <p>This Engineer is not licensed for any Machines yet!</p>
 }
 else
 {
-  <h4>This engineer has the following Machines:</h4>
+  <h4>This Engineer is licensed for the following Machines:</h4>
   <ul>
     @foreach(EngMach join in Model.JoinEntities)
     {
