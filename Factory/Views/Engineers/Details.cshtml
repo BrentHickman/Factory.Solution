@@ -33,8 +33,12 @@ else
 
 
 
-<p>@Html.ActionLink("Add a Machine to this engineer", "AddMachine", new { id = Model.EngineerId })</p>
-<p>@Html.ActionLink("Edit this Engineer", "Edit", new { id = Model.EngineerId })</p>
-<p>@Html.ActionLink("Delete this Engineer", "Delete", new { id = Model.EngineerId })</p>
-<p>@Html.ActionLink("Back to the list of Engineers", "Index")</p>
-<p>@Html.ActionLink("Return Home", "Index", "Home")</p>
+<p>
+  @Html.ActionLink("Add a Machine", "AddMachine", new { id = Model.EngineerId }) | 
+  @Html.ActionLink("Edit", "Edit", new { id = Model.EngineerId }) | 
+  @Html.ActionLink("Delete", "Delete", new { id = Model.EngineerId }) | 
+  <hr>
+  <br>
+  @Html.ActionLink("Back to the list of Engineers", "Index") | 
+  @Html.ActionLink("Return Home", "Index", "Home")
+</p>

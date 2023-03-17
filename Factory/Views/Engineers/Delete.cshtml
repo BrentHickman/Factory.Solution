@@ -9,8 +9,11 @@
 @Html.LabelFor(model => model.EngineerName, "Engineer Name: ") @Html.DisplayFor(model => model.EngineerName)
 @using (Html.BeginForm())
 {
-    <input type="submit" value="Delete" />
+  <input type="submit" value="Delete" />
 }
-<p>@Html.ActionLink("Back to list of Engineers", "Index")</p>
-<p>@Html.ActionLink("Back Home", "Index", "Home")</p>
+<hr>
+<p>
+  @Html.ActionLink("Back to list of Engineers", "Index") |
+  @Html.ActionLink("Back Home", "Index", "Home")
+</p>
 
