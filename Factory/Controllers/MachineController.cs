@@ -94,5 +94,12 @@ namespace Factory.Controllers
       }
       return RedirectToAction("Details", new { id = machine.MachineId });
     }
+        public ActionResult DeleteJoin(int joinId)
+    {
+      EngMach joinEntry = _db.EngMachs.FirstOrDefault(entry => entry.EngMachId == joinId);
+      _db.EngMachs.Remove(joinEntry);
+      _db.SaveChanges();
+      return RedirectToAction("Index");
+    }
   }
 }
